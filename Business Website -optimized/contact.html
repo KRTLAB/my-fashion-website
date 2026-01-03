@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Website Contact Page</title>
+    <link rel="stylesheet" href="contact.css">
+
+    <!-- POPPINS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- GREAT VIBES -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">   
+        <div class="form-container">
+            <h1>Contact Form</h1>
+            <form id="contact-form" autocomplete="off">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <div class="extra">
+                <button class="home"><a href="index.html">RETURN TO HOMEPAGE</a></button>
+                <p>Phone Number: 09017438900</p>
+                <p>Email: <a href="lalachic@gmail.com">lalachic@gmail.com</a></p>
+                <p class="me">This website is fully made by Alao Labeebah. completed on: (1/2/2026)</p>
+            </div>
+        </div>
+    </div>
+
+     <script>
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const message = document.getElementById('message');
+      let errors = [];
+
+      // Name validation
+      if (name.value.trim() === '') {
+        errors.push('Name is required');
+        name.style.border = '1px solid red';
+      } else {
+        name.style.border = '1px solid #ccc';
+      }
+
+      // Email validation
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(email.value.trim())) {
+        errors.push('Invalid email address');
+        email.style.border = '1px solid red';
+      } else {
+        email.style.border = '1px solid #ccc';
+      }
+
+      // Message validation
+      if (message.value.trim() === '') {
+        errors.push('Message is required');
+        message.style.border = '1px solid red';
+      } else {
+        message.style.border = '1px solid #ccc';
+      }
+
+      if (errors.length > 0) {
+        alert(errors.join('\n'));
+      } else {
+        alert('Form submitted Successfully');
+        form.reset(); // Reset the form fields
+      }
+    });
+  </script>
+    
+</body>
+</html>

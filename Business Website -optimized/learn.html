@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Example</title>
+  <style>
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100vh;
+      background-color: #fff;
+      transition: left 0.3s;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    #sidebar.show {
+      left: 0;
+    }
+
+    #sidebar nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #sidebar nav ul li {
+      margin-bottom: 20px;
+    }
+
+    #sidebar nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+    }
+
+    #sidebar nav a:hover {
+      color: #666;
+    }
+
+    @media (max-width: 767px) {
+      #sidebar {
+        display: none;
+      }
+    }
+
+    #menu-icon {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      #menu-icon {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+        background-color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button id="menu-icon">☰</button>
+  <div id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const sidebar = document.getElementById('sidebar');
+
+    menuIcon.addEventListener('click', () => {
+      sidebar.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

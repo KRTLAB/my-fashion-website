@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Profile Page</title>
+    <link rel="stylesheet" href="profile.css" />
+
+    <!-- POPPINS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- GREAT VIBES -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="up">
+            <div class="home">
+                <img src="img/home_24dp_F8E6D0_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="theme">
+                <button id="toggle"><img src="img/invert_colors_24dp_992B15_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            </div>
+        </div>
+      <!-- About Us Section -->
+      <section id="about-us">
+        <h2>Welcome to LalaChic</h2>
+        <p>
+          At LalaChic, we're passionate about empowering individuals to express
+          their unique sense of style. Our mission is to provide trendy,
+          high-quality fashion outfits that make you feel confident and
+          beautiful.
+        </p>
+      </section>
+
+      <!-- About LalaChic Section -->
+      <section id="about-lalachic">
+        <h2>About Us</h2>
+        <p>
+          LalaChic is a fashion-forward online destination founded by fashion
+          enthusiast, Lalage. With a keen eye for style and a deep understanding
+          of what women want, Lalage has curated a collection of fashionable
+          outfits that cater to every woman's needs.
+        </p>
+        <p>
+          From casual chic to red-carpet glamour, our collections are designed
+          to inspire and delight. We're committed to providing exceptional
+          customer service, fast shipping, and a seamless online shopping
+          experience.
+        </p>
+      </section>
+
+      <!-- Our Story Section -->
+      <section id="our-story">
+        <h2>Our Story</h2>
+        <p>
+          LalaChic was born out of a passion for fashion and a desire to create
+          a community where women can come together to share their love of
+          style. Our founder, Lalage, has always been fascinated by the way
+          fashion can transform a person, making them feel confident, beautiful,
+          and empowered.
+        </p>
+        <p>
+          With years of experience in the fashion industry, Lalage has worked
+          with top designers, models, and stylists, gaining invaluable insights
+          into the world of fashion. She has also honed her skills in fashion
+          design, styling, and photography, allowing her to create unique and
+          captivating content for LalaChic.
+        </p>
+      </section>
+
+      <!-- Meet Lalage Section -->
+      <section id="meet-lalage">
+        <h2>Meet Labeebah</h2>
+        <p>
+          Labeebah AKA Krtlab is a fashion enthusiast with a passion for empowering women
+          through style. With a background in fashion design and styling, Labeebah
+          brings a unique perspective to the world of fashion. When she's not
+          scouring the globe for the latest fashion trends, Labeebah can be found
+          experimenting with new recipes in her kitchen or practicing yoga in
+          her spare time.
+        </p>
+      </section>
+
+      <!-- What Sets Us Apart Section -->
+      <section id="what-sets-us-apart">
+        <h2>What Sets Us Apart</h2>
+        <ul>
+          <li>
+            <strong>Trend-Drinking Designs:</strong> Our designs are inspired by
+            the latest fashion trends and tailored to meet the needs of the
+            modern woman.
+          </li>
+          <li>
+            <strong>High-Quality Fabrics:</strong> We use only the finest
+            fabrics to ensure our outfits are not only stylish but also
+            comfortable and durable.
+          </li>
+          <li>
+            <strong>Exceptional Customer Service:</strong> Our customer service
+            team is dedicated to providing you with a seamless and enjoyable
+            shopping experience.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Contact Us Section -->
+      <section id="contact-us">
+        <h2>Contact Us</h2>
+        <p>
+          We'd love to hear from you! If you have any questions, comments, or
+          concerns, please don't hesitate to reach out.
+        </p>
+        <p>
+          Email: <a href="mailto:support@lalachic.com">support@lalachic.com</a>
+        </p>
+        <p>Phone: +234 808 123 4567</p>
+        <p>Address: LalaChic, 123 Fashion Street, Lagos, Nigeria</p>
+      </section>
+
+      <!-- Social Media Section -->
+      <section id="social-media">
+        <h2>Stay Connected</h2>
+        <p>
+          Join our community and stay up-to-date with the latest fashion trends,
+          promotions, and events.
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/lalachicng/"
+              >Instagram: @lalachicng</a
+            >
+          </li>
+          <li>
+            <a href="https://www.facebook.com/lalachicng/"
+              >Facebook: @lalachicng</a
+            >
+          </li>
+          <li>
+            <a href="https://www.twitter.com/lalachicng/"
+              >Twitter: @lalachicng</a
+            >
+          </li>
+        </ul>
+      </section>
+    </div>
+
+     <script>
+        const toggleButton = document.getElementById('toggle'); 
+const body = document.body;
+
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-theme');
+});
+    </script>
+  </body>
+</html>
